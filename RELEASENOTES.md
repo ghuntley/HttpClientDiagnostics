@@ -1,2 +1,5 @@
+### New in 1.1.0
+- innerHandler is no longer optional (issue #1)
+
 ### New in 1.0.0
-If you are reading this, then please come join us in Slack.
+- Initial release.
