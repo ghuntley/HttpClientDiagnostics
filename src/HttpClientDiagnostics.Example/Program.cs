@@ -28,7 +28,7 @@ namespace HttpClientDiagnostics.Example
         static async Task MainAsync()
         {
             Log.Debug("test");
-            var client = new HttpClient(new HttpClientDiagnosticsHandler());
+            var client = new HttpClient(new HttpClientDiagnosticsHandler(new HttpClientHandler()));
 
             await client.GetStringAsync("https://api.duckduckgo.com/?q=apple&format=json");
         }
