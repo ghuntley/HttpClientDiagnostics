@@ -20,7 +20,7 @@ Installation is done via NuGet:
 
 ## Usage
 
-    HttpClient client = new HttpClient(new HttpClientDiagnosticsHandler());
+    HttpClient client = new HttpClient(new HttpClientDiagnosticsHandler(new HttpClientHandler()));
     HttpResponseMessage response = await client.GetStringAsync("https://api.duckduckgo.com/?q=apple&format=json");
 
 Which will automatically yield in your application logs:
