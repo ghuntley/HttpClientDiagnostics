@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>HttpClientDiagnostics</id>
+    <version>$version$</version>
+    <summary>HttpClientDiagnostics is a cross platform, portable class library that provides tracing/logging telemetry of Microsoft.Net.HttpClient requests.</summary>
+    <description>HttpClientDiagnostics is a cross platform, portable class library that provides tracing/logging telemetry of Microsoft.Net.HttpClient requests. In the spirit of "applications decide the logging framework, libraries should play nice" this package does _not_ require any external dependencies or abstractions like Common.Logging. Logging all happens automatically, behind the scenes, without you needing to know how or care how to wire this up thanks to the amazing LibLog. It’s like magic! Its the future.</description>
+    <language>en-us</language>
+  </metadata>
+  <files>
+    <!-- Portable PCL -->
+    <file src="bin/Release/HttpClientDiagnostics.dll" target="lib/portable-net45+netcore45+wp8+UAP10+MonoAndroid403+MonoTouch10+Xamarin.iOS10/HttpClientDiagnostics.dll" />
+    <!-- Source -->
+    <file src="*.cs" target="src" />
+  </files>
+</package>
