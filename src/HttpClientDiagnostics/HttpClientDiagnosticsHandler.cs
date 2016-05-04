@@ -17,7 +17,6 @@ namespace HttpClientDiagnostics
 
         public HttpClientDiagnosticsHandler()
         {
-            InnerHandler = new HttpClientHandler();
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
