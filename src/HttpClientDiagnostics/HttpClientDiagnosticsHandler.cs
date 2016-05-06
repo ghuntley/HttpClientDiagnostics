@@ -28,7 +28,7 @@ namespace HttpClientDiagnostics
                 Logger.Debug(string.Format("Request: {0}", request));
                 if (request.Content != null)
                 {
-                    var content = await request.Content.ReadAsStringAsync();
+                    var content = await request.Content.ReadAsStringAsync().ConfigureAwait(false);
                     Logger.Debug(string.Format("Request Content: {0}", content));
                 }
 
@@ -38,7 +38,7 @@ namespace HttpClientDiagnostics
                 Logger.Debug(string.Format("Response: {0}", response));
                 if (response.Content != null)
                 {
-                    var content = await response.Content.ReadAsStringAsync();
+                    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     Logger.Debug(string.Format("Response Content: {0}", content));
                 }
 
