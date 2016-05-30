@@ -66,18 +66,12 @@ The constructor of `HttpClientDiagnosticsHandler` can take another `HttpMessageH
         {
             Func<HttpMessageHandler, IDuckDuckGoApi> createClient = innerHandler =>
             {
-                HttpMessageHandler handler;
-
                 if (enableDiagnostics)
                 {
-                    handler = new HttpClientDiagnosticsHandler(innerHandler);
-                }
-                else
-                {
-                    handler = messageHandler;
+                    innerHandler = new HttpClientDiagnosticsHandler(innerHandler);
                 }
 
-                var client = new HttpClient(handler))
+                var client = new HttpClient(innerHandler))
                 {
                     BaseAddress = new Uri(apiBaseAddress ?? ApiBaseAddress)
                 };
