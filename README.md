@@ -74,7 +74,7 @@ The constructor of `HttpClientDiagnosticsHandler` can take another `HttpMessageH
                 }
                 else
                 {
-                    handler = messageHandler;
+                    handler = innerHandler;
                 }
 
                 var client = new HttpClient(handler))
